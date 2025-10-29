@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="UI Automation Test"      parallel ="methods">
+  <test thread-count="8" name="Test">
+  <parameter name="browser" value="${browser}"></parameter>
+  <parameter name="isLamdaTest" value="${isLamdaTest}"></parameter>
+  <parameter name="isHeadless" value="${isHeadless}"></parameter>
+    <classes>
+      <class name="com.ui.test.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

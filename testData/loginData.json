@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "emailAddress": "testabcd@test.com",
+      "password": "testabcd"
+    },
+    {
+      "emailAddress": "testabscd@test.com",
+      "password": "testabcd"
+    }
+  ]
+}
