@@ -1,7 +1,7 @@
 package com.ui.test;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+
 import static com.ui.constants.Browser.*;
 
 import static org.testng.Assert.*;
@@ -25,7 +25,7 @@ public class LoginTest extends TestBase {
 	@Test(description = " verifies user is able to login into  the application", groups = { "Sanity",
 			"e2e" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestDataProvider")
 	public void loginTest(User user) throws InterruptedException {
-		AssertJUnit.assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
+		Assert.assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
 				"Test abcd");
 
 	}
@@ -34,7 +34,7 @@ public class LoginTest extends TestBase {
 	@Test(description = " verifies user is able to login into  the application", groups = { "Sanity",
 			"e2e" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestCSVtDataProvider")
 	public void loginCSVTest(User user) throws InterruptedException {
-		AssertJUnit.assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
+		Assert.assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
 				"Test abcd");
 
 	}
@@ -46,7 +46,7 @@ public class LoginTest extends TestBase {
 	public void loginExcelTest(User user) throws InterruptedException {
 		
 		
-		AssertJUnit.assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
+		Assert.assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
 		"Test abcd1");
 			
 	
